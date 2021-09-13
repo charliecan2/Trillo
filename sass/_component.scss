@@ -1,17 +1,62 @@
 // Logo
 .logo {
   height: 3.25rem;
+  margin-left: 3rem;
 }
 
 // Search
 .search {
+  flex: 0 0 40%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   &-input {
+    font-family: inherit;
+    font-size: inherit;
+    background-color: var(--color-grey-light-2);
+    color: inherit;
+    border: none;
+    padding: 0.7rem 2rem;
+    border-radius: 70px;
+    width: 90%;
+    transition: all 0.5s;
+    margin-right: -3.25rem;
+
+    &:focus {
+      outline: none;
+      width: 100%;
+      background-color: var(--color-grey-light-3);
+    }
+
+    &::-webkit-input-placeholder {
+      font-weight: 100;
+      color: var(--color-grey-light-4);
+    }
+  }
+
+  &-input:focus + &-button {
+    background-color: var(--color-grey-light-3);
   }
 
   &-button {
+    border: none;
+    background-color: var(--color-grey-light-2);
+
+    &:focus {
+      outline: none;
+    }
+
+    &:active {
+      transform: translateY(2px);
+    }
   }
 
   &-icon {
+    height: 2rem;
+    width: 2rem;
+    fill: var(--color-grey-dark-3);
   }
 }
 
@@ -21,6 +66,8 @@
   }
 
   &__icon {
+    height: 2.5rem;
+    width: 2.5rem;
   }
 
   &__notification {
@@ -30,6 +77,8 @@
   }
 
   &__user-photo {
+    height: 3.75rem;
+    border-radius: 50%;
   }
 
   &__user-name {
